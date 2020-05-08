@@ -1,0 +1,6 @@
+.items-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; //wrap items to the next line
+    justify-content: space-between;
+}
