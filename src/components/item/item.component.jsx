@@ -1,10 +1,14 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './item.styles.scss';
 
-const Item = ({ title, imageUrl, size }) => {
+const Item = ({ title, imageUrl, size, linkUrl, history, match }) => {
     return (
-        <div className={`item ${size}`}>
+        <div
+            onClick={() => history.push(`${match.url}${linkUrl}`)}
+            className={`item ${size}`}
+        >
             <div
                 className='background-image'
                 style={{
@@ -12,11 +16,11 @@ const Item = ({ title, imageUrl, size }) => {
                 }}
             />
             <div className='content'>
-                <h1 className='title'>{title.toUpperCase() }</h1>
+                <h1 className='title'>{title.toUpperCase()}</h1>
                 <span className='subtitle'>SHOP NOW</span>
             </div>
         </div>
     );
 }
 
-export default Item;
+export default withRouter(Item);

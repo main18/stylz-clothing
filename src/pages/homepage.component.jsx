@@ -5,7 +5,7 @@ import ItemContainer from '../components/item-container/item-container.component
 const HomePage = () => {
     return(
         <div className='homepage'>
-            <ItemContainer/>
+            <ItemContainer />
         </div>
     );
 }
