@@ -1,6 +1,6 @@
 import React from 'react';
 import './homepage.styles.scss';
-import ItemContainer from '../components/item-container/item-container.component';
+import ItemContainer from '../../components/item-container/item-container.component';
 
 const HomePage = () => {
     return(

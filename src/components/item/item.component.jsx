@@ -6,6 +6,7 @@ import './item.styles.scss';
 const Item = ({ title, imageUrl, size, linkUrl, history, match }) => {
     return (
         <div
+            //${match.url}${linkUrl} === somematchedURL/linkURL
             onClick={() => history.push(`${match.url}${linkUrl}`)}
             className={`item ${size}`}
         >
